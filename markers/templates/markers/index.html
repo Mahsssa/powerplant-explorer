@@ -1,0 +1,17 @@
+{% extends "markers/layout.html"%} {% block content %} {% load static %}
+<!-- Import Leaflet CSS -->
+<link rel="stylesheet" href="{% static 'app/leaflet/leaflet.css' %}" />
+<link rel="stylesheet" href="{% static 'markers/css/styles.css'%}" />
+
+<div id="map"></div>
+
+<!-- Define a global JavaScript variable that holds the static URL -->
+<script>
+  let staticUrl = "{% static '' %}";
+</script>
+<script src="{% static 'app/jquery/dist/jquery.min.js' %}"></script>
+<!-- Import Leaflet JS -->
+<script src="{% static 'app/leaflet/leaflet.js' %}"></script>
+<script src="{% static 'markers/js/scripts.js'%}"></script>
+
+{%endblock%}
